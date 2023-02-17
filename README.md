@@ -31,13 +31,4 @@ You simply run
 For quick (but highly suboptimal) results, we recommend K=1000. In the article, we used K=500000.
 
 ### Learning preference reward function
-This is where the actual algorithms work. You can simply run
-```python
-	python run.py [task_name] [method] N M b
-```
-b is required only for batch active learning methods. We fixed B=20b. To change that simply go to demos.py and modify 11th line.
-Note: N must be divisible by b.
-After each query or batch, the user will be showed the w-vector learned up to that point. To understand what those values correspond to, one can check the 'Tasks' section of the publication.
-
-### Demonstration of learned parameters
-This is just for demonstration purposes. run_optimizer.py starts with 3 parameter values. You can simply modify them to see optimized behavior for different tasks and different w-vectors.
+check description.txt

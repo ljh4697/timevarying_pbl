@@ -9,28 +9,14 @@ driver_opt_params ={
     'delta':0.7,
     'alpha':0.0002,
     'gamma':0.952,
-    'lambda':0.1
+    'lambda':2.6
 }
 
 tosser_opt_params = {
     'delta':0.7,
-    'alpha':0.0009,
-    'gamma':0.954,
-    'lambda':0.2
-}
-
-avoid_opt_params = {
-    'delta':0.7,
     'alpha':0.0002,
-    'gamma':0.95,
-    'lambda':0.42
-}
-v_tosser_opt_params = {
-    'delta':0.7,
-    'alpha':0.0009,
-    'gamma':0.954,
-    'lambda':0.19,
-    'seed':4
+    'gamma':0.93,
+    'lambda':0.9
 }
 
 
@@ -94,13 +80,6 @@ dpb2_tosser_opt_params = {
     'delta':0.7,
     'alpha':0.0004,  # 8 point
     'gamma':0.95,
-    'lambda':0.5
-}
-
-dpb2_avoid_opt_params = {
-    'delta':0.7,
-    'alpha':0.0009,
-    'gamma':0.95, # 94 point
     'lambda':0.5
 }
 
