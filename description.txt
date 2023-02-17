@@ -1,0 +1,54 @@
+- 실험한 Library 환경 requirements.txt, python 3.9.7
+
+- 경로를 수정 해주셔야 할 부분 
+
+	- ./algoss.py (line 61)
+	- ./algorithms/PBL_algorithm.py (line 20, 23)
+	
+	
+- quick demo
+
+	## Driver, Tosser, Mountaincar, LunarLander, Swimmer 환경에서 trajectory를 presampling 하는 코드 ./input_sampler.py
+	
+	python input_sampler.py [task] [K] ### task 는 위 환경중 하나, K 는 number of trajectories
+	
+	## trajectory sampling 후 알고리즘 돌리는 코드 
+	
+	cd run_algo
+	python3 run_experiment.py -h 혹은 algorithms/DPB.py 에서 알고리즘 argument 확인하여 코드 실행
+	
+	********************************************************************
+	  -a {DPB,batch_active_PBL,DPB2}, --algo {DPB,batch_active_PBL,DPB2}
+		                type of algorithm
+	  -e NUM_ITERATION, --num-iteration NUM_ITERATION
+		                # of iteration
+	  -t TASK_ENV, --task-env TASK_ENV
+		                type of simulation environment
+	  -b NUM_BATCH, --num-batch NUM_BATCH
+		                # of batch
+	  -s SEED, --seed SEED  A random seed
+	  -w EXPLORATION_WEIGHT, --exploration-weight EXPLORATION_WEIGHT
+		                DPB hyperparameter exploration weight
+	  -g DISCOUNTING_FACTOR, --discounting-factor DISCOUNTING_FACTOR
+		                DPB hyperparameter discounting factor
+	  -d DELTA, --delta DELTA
+		                DPB hyperparameter delta
+	  -l REGULARIZED_LAMBDA, --regularized-lambda REGULARIZED_LAMBDA
+		                DPB regularized lambda
+	  -bm BA_METHOD, --BA-method BA_METHOD
+		                method of batch active
+	********************************************************************  
+		                
+	코드를 돌리면 ./results/환경/알고리즘/ 안에 사용하신 파라미터로 파일이 저장 됩니다.
+	./results/plot_results.py 에서 보고싶은 parameter 값을 입력하여 알고리즘 퍼포먼스를 plot 할 수 있습니다.
+		                
+		                
+* 새로운 환경에 적용시키기 위해 해야될 것
+
+	- input_sampler.py 와 같이 traejctory를 presampling 하여 psi (query selection하기위해 필요), input_set (query visualization 하기위해 필요) 으로 저장.
+	- ./simulation_utils.py/ 에서 get_feedback function 안에 real human이 query label할 수 있는 visualization 코드를 구현.
+
+
+
+	
+	
