@@ -45,7 +45,7 @@ DPB2_opt_simple_reward = []
 for i in range(1, 11):
     
     #tosser, avoid
-    DPB_result = np.load(task + '/DPB/' + 'n{:}-iter400-DPB-delta{:.2f}-alpha{:.4f}-gamma{:.3f}-lambda{:.2f}-seed{:d}.npy'.format(task, delta, alpha, gamma, lamb, i))
+    DPB_result = np.load(task + '/DPB/' + '{:}-iter400-DPB-delta{:.2f}-alpha{:.4f}-gamma{:.3f}-lambda{:.2f}-seed{:d}.npy'.format(task, delta, alpha, gamma, lamb, i))
     
     #driver
     #DPB_result = np.load(task + '/DPB/' + '{:}-iter400-DPB-delta{:.2f}-alpha{:.4f}-gamma{:.2f}-seed{:d}.npy'.format(task, delta, alpha, gamma, i))
